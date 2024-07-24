@@ -1,14 +1,32 @@
-import { Home } from "lucide-react";
-import Index from "./pages/Index.jsx";
+import { LayoutDashboard, InboxIcon, MessageSquareText, Users } from "lucide-react";
+import Dashboard from "./pages/Dashboard";
+import IncomingRequests from "./pages/IncomingRequests";
+import AutomatedResponses from "./pages/AutomatedResponses";
+import BackOfficeRouting from "./pages/BackOfficeRouting";
 
-/**
- * Central place for defining the navigation items. Used for navigation components and routing.
- */
 export const navItems = [
   {
-    title: "Home",
+    title: "Dashboard",
     to: "/",
-    icon: <Home className="h-4 w-4" />,
-    page: <Index />,
+    icon: <LayoutDashboard className="h-4 w-4" />,
+    page: <Dashboard />,
+  },
+  {
+    title: "Incoming Requests",
+    to: "/incoming-requests",
+    icon: <InboxIcon className="h-4 w-4" />,
+    page: <IncomingRequests />,
+  },
+  {
+    title: "Automated Responses",
+    to: "/automated-responses",
+    icon: <MessageSquareText className="h-4 w-4" />,
+    page: <AutomatedResponses />,
+  },
+  {
+    title: "Back Office Routing",
+    to: "/back-office-routing",
+    icon: <Users className="h-4 w-4" />,
+    page: <BackOfficeRouting />,
   },
 ];
